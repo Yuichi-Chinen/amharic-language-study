@@ -1,0 +1,198 @@
+<title>アムハラ語聖書 書名一覧</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Ethiopic:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #EDEAE1; --surface: #F8F5ED; --surface-alt: #E2DDCD;
+    --ink: #241F19; --ink-muted: #6E6455; --accent: #AC3527;
+    --accent-soft: #DCC9AE; --border: #D6CFBC;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #1B1712; --surface: #241F19; --surface-alt: #2D2721;
+      --ink: #EEE6D6; --ink-muted: #A6987F; --accent: #E06A54;
+      --accent-soft: #493F35; --border: #3A332B;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #1B1712; --surface: #241F19; --surface-alt: #2D2721;
+    --ink: #EEE6D6; --ink-muted: #A6987F; --accent: #E06A54;
+    --accent-soft: #493F35; --border: #3A332B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+    line-height: 1.7;
+    padding-inline: clamp(16px, 4vw, 56px);
+    padding-block: clamp(20px, 4vw, 56px);
+  }
+  .page { max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+  .ge, .gez { font-family: "Noto Serif Ethiopic", "Nyala", serif; }
+  .rom { font-family: "Noto Serif", Georgia, serif; font-style: italic; }
+
+  header.masthead {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px 28px;
+    padding-bottom: 20px; border-bottom: 2px solid var(--accent);
+  }
+  .mark { font-size: clamp(2.3rem, 6vw, 3.4rem); font-weight: 700; color: var(--accent); line-height: 1.1; }
+  .titles h1 { font-size: clamp(1.3rem, 2.6vw, 1.7rem); margin: 0 0 4px; text-wrap: balance; }
+  .titles p { margin: 0; color: var(--ink-muted); font-size: 0.9rem; max-width: 62ch; }
+
+  .toolbar { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; }
+  .toolbar input {
+    flex: 1 1 260px; font: inherit; font-size: 0.95rem; padding: 8px 12px;
+    background: var(--surface); color: var(--ink);
+    border: 1px solid var(--border); border-radius: 4px;
+  }
+  .toolbar input:focus-visible, .tabs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tabs button {
+    font: inherit; font-size: 0.85rem; padding: 6px 12px; cursor: pointer;
+    background: var(--surface); color: var(--ink);
+    border: 1px solid var(--border); border-radius: 4px;
+  }
+  .tabs button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+  .count { font-size: 0.8rem; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+
+  .vocab { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 8px; }
+  .vocab div { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 8px 12px; }
+  .vocab .w { font-size: 1.1rem; color: var(--accent); }
+  .vocab .k { font-size: 0.75rem; color: var(--ink-muted); display: block; }
+  .vocab .m { font-size: 0.82rem; display: block; }
+
+  section.testament { display: flex; flex-direction: column; gap: 14px; }
+  h2.sec {
+    margin: 8px 0 0; font-size: 1.15rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px;
+  }
+  h2.sec .ge { color: var(--accent); font-size: 1.45rem; }
+  h2.sec .rd { font-size: 0.8rem; color: var(--ink-muted); font-weight: 400; }
+  .ext-note {
+    margin: 0; font-size: 0.86rem; background: var(--surface);
+    border: 1px solid var(--border); border-left: 4px solid var(--accent);
+    border-radius: 4px; padding: 10px 14px; max-width: 80ch;
+  }
+  h3.grp { margin: 6px 0 0; font-size: 0.92rem; display: flex; gap: 10px; align-items: baseline; }
+  h3.grp .ge { color: var(--accent); font-weight: 600; }
+
+  .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; min-width: 860px; }
+  th, td { border-bottom: 1px solid var(--border); padding: 7px 12px; text-align: left; vertical-align: top; }
+  thead th {
+    background: var(--surface-alt); font-size: 0.72rem; letter-spacing: 0.06em;
+    color: var(--ink-muted); font-weight: 700; white-space: nowrap;
+  }
+  tbody tr:nth-child(even) td { background: var(--bg); }
+  tbody tr:last-child td { border-bottom: 0; }
+  td.num { width: 3.2em; color: var(--ink-muted); font-variant-numeric: tabular-nums; font-size: 0.8rem; text-align: right; }
+  td.gez { font-size: 1.2rem; white-space: nowrap; }
+  td.read .rom { display: block; font-size: 0.82rem; color: var(--ink-muted); }
+  td.read .kt { display: block; font-size: 0.86rem; color: var(--accent); }
+  td.ja { font-weight: 500; white-space: nowrap; }
+  td.note { font-size: 0.8rem; color: var(--ink-muted); min-width: 220px; }
+  td.note .ge { color: var(--ink); }
+  .empty { padding: 18px; color: var(--ink-muted); font-size: 0.9rem; }
+
+  .notes { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 4px; padding: 16px 22px; }
+  .notes h3 { margin: 0 0 8px; font-size: 0.95rem; }
+  .notes ul { margin: 0; padding-left: 1.15em; display: flex; flex-direction: column; gap: 6px; font-size: 0.86rem; }
+  footer { padding-top: 14px; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--ink-muted); }
+</style>
+
+<div class="page">
+  <header class="masthead">
+    <div class="mark ge">መጻሕፍት</div>
+    <div class="titles">
+      <h1>アムハラ語聖書 書名一覧</h1>
+      <p>旧約39巻・新約27巻と、エチオピア正教会の81巻正典に含まれる追加書。ゲエズ文字の書名、読み方、日本語書名、備考を並べた。</p>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="検索: 創世記 / ዘፍጥረት / Orit / マタイ" aria-label="書名を検索">
+    <div class="tabs" role="group" aria-label="表示する範囲">
+      <button type="button" id="tab-all" data-f="all" aria-pressed="true">すべて</button>
+      <button type="button" id="tab-ot" data-f="ot" aria-pressed="false">旧約</button>
+      <button type="button" id="tab-nt" data-f="nt" aria-pressed="false">新約</button>
+      <button type="button" id="tab-ext" data-f="ext" aria-pressed="false">追加書</button>
+    </div>
+    <span class="count" id="count"></span>
+  </div>
+
+  <div>
+    <h3 class="grp" style="margin-bottom:8px">書名によく出る語</h3>
+    <div class="vocab" id="vocab"></div>
+  </div>
+
+  <div id="list"></div>
+
+  <div class="notes">
+    <h3>注記</h3>
+    <ul>
+      <li>カタカナはアムハラ語読みの目安。ゲエズ語(典礼語)として読む場合は、段VIの母音や語末の読みが少し変わる。</li>
+      <li>ä と a はどちらも「ア」で示している。放出音(<span class="ge">ቀ ጠ ጰ ጸ</span> など)は日本語にない音なので、音源で確認すること。</li>
+      <li>日本語書名は新共同訳を基準にした。口語訳と名前が違う書は備考に書いた。</li>
+      <li>66巻の書名は wordproject.org のアムハラ語聖書(1962年版系)目次で確認した。同目次ではゼファニヤ書(<span class="ge">ትንቢተ ሶፎንያስ</span>)が抜けていたので補っている。</li>
+      <li>追加書の数え方と綴りは資料によって揺れがある。参考情報として扱うこと。</li>
+    </ul>
+  </div>
+
+  <footer>アムハラ語聖書 書名一覧 — Ethiopic (Ge'ez script) Bible book names</footer>
+</div>
+
+<script>
+  const DATA = [{"id": "ot", "ge": "ብሉይ ኪዳን", "ja": "旧約聖書", "reading": "ブルイ・キダン", "groups": [{"ge": "ኦሪት", "ja": "律法(モーセ五書)", "books": [["ኦሪት ዘፍጥረት", "Orit Zäfṭrät", "オリト・ザフトゥラト", "創世記", "ኦሪት=律法(トーラー)、ዘ=「〜の」、ፍጥረት=創造"], ["ኦሪት ዘጸአት", "Orit Zäṣäʾat", "オリト・ザツァアト", "出エジプト記", "ጸአት=出ること(脱出)"], ["ኦሪት ዘሌዋውያን", "Orit Zälewawyan", "オリト・ザレワウヤン", "レビ記", "ሌዋውያን=レビ人たち"], ["ኦሪት ዘኍልቍ", "Orit Zänʷlḳʷ", "オリト・ザヌルク", "民数記", "ኍልቍ=数。唇音化文字 ኍ・ቍ を含む"], ["ኦሪት ዘዳግም", "Orit Zädagm", "オリト・ザダグム", "申命記", "ዳግም=再び(第二の律法)"]]}, {"ge": "ታሪክ", "ja": "歴史書", "books": [["መጽሐፈ ኢያሱ ወልደ ነዌ", "Mäṣḥafä Iyasu Wäldä Näwe", "マツハファ・イヤス・ワルダ・ナウェ", "ヨシュア記", "መጽሐፈ=「〜の書」。直訳「ヌンの子ヨシュアの書」"], ["መጽሐፈ መሣፍንት", "Mäṣḥafä Mäsafnt", "マツハファ・マサフント", "士師記", "መሣፍንት=裁き人たち"], ["መጽሐፈ ሩት", "Mäṣḥafä Rut", "マツハファ・ルト", "ルツ記", ""], ["መጽሐፈ ሳሙኤል ቀዳማዊ", "Mäṣḥafä Samuʾel Ḳädamawi", "マツハファ・サムエル・カダマウィ", "サムエル記上", "ቀዳማዊ=第一。正教会では「列王記第一」とも数える"], ["መጽሐፈ ሳሙኤል ካልዕ", "Mäṣḥafä Samuʾel Kalʾ", "マツハファ・サムエル・カルウ", "サムエル記下", "ካልዕ=第二"], ["መጽሐፈ ነገሥት ቀዳማዊ", "Mäṣḥafä Nägäśt Ḳädamawi", "マツハファ・ナガスト・カダマウィ", "列王記上", "ነገሥት=王たち"], ["መጽሐፈ ነገሥት ካልዕ", "Mäṣḥafä Nägäśt Kalʾ", "マツハファ・ナガスト・カルウ", "列王記下", ""], ["መጽሐፈ ዜና መዋዕል ቀዳማዊ", "Mäṣḥafä Zena Mäwaʿl Ḳädamawi", "マツハファ・ゼナ・マワウル・カダマウィ", "歴代誌上", "ዜና መዋዕል=日々の記録(年代記)"], ["መጽሐፈ ዜና መዋዕል ካልዕ", "Mäṣḥafä Zena Mäwaʿl Kalʾ", "マツハファ・ゼナ・マワウル・カルウ", "歴代誌下", ""], ["መጽሐፈ ዕዝራ", "Mäṣḥafä ʿƏzra", "マツハファ・ウズラ", "エズラ記", ""], ["መጽሐፈ ነህምያ", "Mäṣḥafä Nähmya", "マツハファ・ナハムヤ", "ネヘミヤ記", ""], ["መጽሐፈ አስቴር", "Mäṣḥafä Aster", "マツハファ・アステル", "エステル記", ""]]}, {"ge": "ጥበብ", "ja": "詩歌・知恵文学", "books": [["መጽሐፈ ኢዮብ", "Mäṣḥafä Iyob", "マツハファ・イヨブ", "ヨブ記", ""], ["መዝሙረ ዳዊት", "Mäzmurä Dawit", "マズムラ・ダウィト", "詩編", "直訳「ダビデの歌」。エチオピアで最も親しまれる書"], ["መጽሐፈ ምሳሌ", "Mäṣḥafä Msale", "マツハファ・ムサレ", "箴言", "ምሳሌ=たとえ・格言"], ["መጽሐፈ መክብብ", "Mäṣḥafä Mäkbb", "マツハファ・マクバブ", "コヘレトの言葉", "口語訳では「伝道の書」"], ["መኃልየ መኃልይ ዘሰሎሞን", "Mäḫalyä Mäḫaly zäSälomon", "マハルヤ・マハルイ・ザサロモン", "雅歌", "直訳「ソロモンの歌の中の歌」"]]}, {"ge": "ነቢያት ዐበይት", "ja": "大預言書", "books": [["ትንቢተ ኢሳይያስ", "Tnbitä Isayyas", "トゥンビタ・イサイヤス", "イザヤ書", "ትንቢተ=「〜の預言」"], ["ትንቢተ ኤርምያስ", "Tnbitä Ermyas", "トゥンビタ・エルムヤス", "エレミヤ書", ""], ["ሰቆቃው ኤርምያስ", "Säḳoḳaw Ermyas", "サコカウ・エルムヤス", "哀歌", "直訳「エレミヤの嘆き」"], ["ትንቢተ ሕዝቅኤል", "Tnbitä Ḥzḳʾel", "トゥンビタ・フズクエル", "エゼキエル書", ""], ["ትንቢተ ዳንኤል", "Tnbitä Danʾel", "トゥンビタ・ダンエル", "ダニエル書", "正教会版はギリシア語追加部分を含む"]]}, {"ge": "ነቢያት ንኡሳን", "ja": "小預言書(十二小預言書)", "books": [["ትንቢተ ሆሴዕ", "Tnbitä Hoseʿ", "トゥンビタ・ホセウ", "ホセア書", ""], ["ትንቢተ ኢዮኤል", "Tnbitä Iyoʾel", "トゥンビタ・イヨエル", "ヨエル書", ""], ["ትንቢተ አሞጽ", "Tnbitä Amoṣ", "トゥンビタ・アモツ", "アモス書", ""], ["ትንቢተ አብድዩ", "Tnbitä Abdyu", "トゥンビタ・アブドゥユ", "オバデヤ書", ""], ["ትንቢተ ዮናስ", "Tnbitä Yonas", "トゥンビタ・ヨナス", "ヨナ書", ""], ["ትንቢተ ሚክያስ", "Tnbitä Mikyas", "トゥンビタ・ミクヤス", "ミカ書", ""], ["ትንቢተ ናሆም", "Tnbitä Nahom", "トゥンビタ・ナホム", "ナホム書", ""], ["ትንቢተ ዕንባቆም", "Tnbitä ʿƏnbaḳom", "トゥンビタ・ウンバコム", "ハバクク書", ""], ["ትንቢተ ሶፎንያስ", "Tnbitä Sofonyas", "トゥンビタ・ソフォンヤス", "ゼファニヤ書", "口語訳では「ゼパニヤ書」"], ["ትንቢተ ሐጌ", "Tnbitä Ḥage", "トゥンビタ・ハゲ", "ハガイ書", ""], ["ትንቢተ ዘካርያስ", "Tnbitä Zäkaryas", "トゥンビタ・ザカルヤス", "ゼカリヤ書", ""], ["ትንቢተ ሚልክያ", "Tnbitä Milkya", "トゥンビタ・ミルクヤ", "マラキ書", ""]]}]}, {"id": "nt", "ge": "ሐዲስ ኪዳን", "ja": "新約聖書", "reading": "ハディス・キダン(アムハラ語: አዲስ ኪዳን アディス・キダン)", "groups": [{"ge": "ወንጌላት", "ja": "福音書・使徒言行録", "books": [["የማቴዎስ ወንጌል", "Yämatewos Wängel", "ヤマテウォス・ワンゲル", "マタイによる福音書", "የ=「〜の」(アムハラ語)、ወንጌል=福音"], ["የማርቆስ ወንጌል", "Yämarḳos Wängel", "ヤマルコス・ワンゲル", "マルコによる福音書", ""], ["የሉቃስ ወንጌል", "Yäluḳas Wängel", "ヤルカス・ワンゲル", "ルカによる福音書", ""], ["የዮሐንስ ወንጌል", "Yäyoḥanns Wängel", "ヤヨハンス・ワンゲル", "ヨハネによる福音書", ""], ["የሐዋርያት ሥራ", "Yäḥawaryat Śra", "ヤハワルヤト・スラ", "使徒言行録", "直訳「使徒たちの働き」。口語訳では「使徒行伝」"]]}, {"ge": "መልእክታተ ጳውሎስ", "ja": "パウロ書簡", "books": [["ወደ ሮሜ ሰዎች", "Wädä Rome Säwočč", "ワダ・ロメ・サウォッチ", "ローマの信徒への手紙", "直訳「ローマの人々へ」。ወደ=〜へ、ሰዎች=人々"], ["1ኛ ወደ ቆሮንቶስ ሰዎች", "Andäñña wädä Ḳorontos Säwočč", "アンダニャ・ワダ・コロントス・サウォッチ", "コリントの信徒への手紙一", "1ኛ=第一(アンダニャ)"], ["2ኛ ወደ ቆሮንቶስ ሰዎች", "Hulättäñña wädä Ḳorontos Säwočč", "フラッタニャ・ワダ・コロントス・サウォッチ", "コリントの信徒への手紙二", "2ኛ=第二(フラッタニャ)"], ["ወደ ገላትያ ሰዎች", "Wädä Gälatya Säwočč", "ワダ・ガラトゥヤ・サウォッチ", "ガラテヤの信徒への手紙", ""], ["ወደ ኤፌሶን ሰዎች", "Wädä Efeson Säwočč", "ワダ・エフェソン・サウォッチ", "エフェソの信徒への手紙", "口語訳では「エペソ人への手紙」"], ["ወደ ፊልጵስዩስ ሰዎች", "Wädä Filp̣sɨyus Säwočč", "ワダ・フィルプスユス・サウォッチ", "フィリピの信徒への手紙", "口語訳では「ピリピ人への手紙」"], ["ወደ ቆላስይስ ሰዎች", "Wädä Ḳolasyis Säwočč", "ワダ・コラスイス・サウォッチ", "コロサイの信徒への手紙", ""], ["1ኛ ወደ ተሰሎንቄ ሰዎች", "Andäñña wädä Täsälonḳe Säwočč", "アンダニャ・ワダ・タサロンケ・サウォッチ", "テサロニケの信徒への手紙一", ""], ["2ኛ ወደ ተሰሎንቄ ሰዎች", "Hulättäñña wädä Täsälonḳe Säwočč", "フラッタニャ・ワダ・タサロンケ・サウォッチ", "テサロニケの信徒への手紙二", ""], ["1ኛ ወደ ጢሞቴዎስ", "Andäñña wädä Ṭimotewos", "アンダニャ・ワダ・ティモテウォス", "テモテへの手紙一", "個人宛の手紙は ሰዎች(人々)が付かない"], ["2ኛ ወደ ጢሞቴዎስ", "Hulättäñña wädä Ṭimotewos", "フラッタニャ・ワダ・ティモテウォス", "テモテへの手紙二", ""], ["ወደ ቲቶ", "Wädä Tito", "ワダ・ティト", "テトスへの手紙", ""], ["ወደ ፊልሞና", "Wädä Filmona", "ワダ・フィルモナ", "フィレモンへの手紙", ""], ["ወደ ዕብራውያን", "Wädä ʿƏbrawyan", "ワダ・ウブラウヤン", "ヘブライ人への手紙", "口語訳では「ヘブル人への手紙」"]]}, {"ge": "መልእክታት ሐዋርያት", "ja": "公同書簡", "books": [["የያዕቆብ መልእክት", "Yäyaʿḳob Mälʾkt", "ヤヤウコブ・マルウクト", "ヤコブの手紙", "መልእክት=手紙(書簡)"], ["1ኛ የጴጥሮስ መልእክት", "Andäñña Yäp̣eṭros Mälʾkt", "アンダニャ・ヤペトロス・マルウクト", "ペトロの手紙一", "口語訳では「ペテロの第一の手紙」"], ["2ኛ የጴጥሮስ መልእክት", "Hulättäñña Yäp̣eṭros Mälʾkt", "フラッタニャ・ヤペトロス・マルウクト", "ペトロの手紙二", ""], ["1ኛ የዮሐንስ መልእክት", "Andäñña Yäyoḥanns Mälʾkt", "アンダニャ・ヤヨハンス・マルウクト", "ヨハネの手紙一", ""], ["2ኛ የዮሐንስ መልእክት", "Hulättäñña Yäyoḥanns Mälʾkt", "フラッタニャ・ヤヨハンス・マルウクト", "ヨハネの手紙二", ""], ["3ኛ የዮሐንስ መልእክት", "Sostäñña Yäyoḥanns Mälʾkt", "ソスタニャ・ヤヨハンス・マルウクト", "ヨハネの手紙三", "3ኛ=第三(ソスタニャ)"], ["የይሁዳ መልእክት", "Yäyhuda Mälʾkt", "ヤユフダ・マルウクト", "ユダの手紙", ""]]}, {"ge": "ራእይ", "ja": "預言書", "books": [["የዮሐንስ ራእይ", "Yäyoḥanns Raʾy", "ヤヨハンス・ラウイ", "ヨハネの黙示録", "ራእይ=幻・啓示"]]}]}, {"id": "ext", "ge": "ተጨማሪ መጻሕፍት", "ja": "エチオピア正教会の追加書(81巻正典)", "reading": "タチャマリ・マツァハフト", "groups": [{"ge": "ብሉይ", "ja": "旧約の追加書(第二正典・エチオピア独自書)", "books": [["መጽሐፈ ሄኖክ", "Mäṣḥafä Henok", "マツハファ・ヘノク", "エノク書", "全文が残るのはゲエズ語版のみ。エチオピア正教会のみが正典とする"], ["መጽሐፈ ኩፋሌ", "Mäṣḥafä Kufale", "マツハファ・クファレ", "ヨベル書", "ኩፋሌ=区分(年代の区切り)。完全な本文はゲエズ語版のみ"], ["መጽሐፈ ጦቢት", "Mäṣḥafä Ṭobit", "マツハファ・トビト", "トビト記", "カトリック・正教会でも第二正典"], ["መጽሐፈ ዮዲት", "Mäṣḥafä Yodit", "マツハファ・ヨディト", "ユディト記", ""], ["መጽሐፈ መቃብያን ቀዳማዊ", "Mäṣḥafä Mäḳabyan Ḳädamawi", "マツハファ・マカブヤン・カダマウィ", "メカビアン第一書", "エチオピア独自書。カトリックの「マカバイ記」とは別の内容"], ["መጽሐፈ መቃብያን ካልዕ", "Mäṣḥafä Mäḳabyan Kalʾ", "マツハファ・マカブヤン・カルウ", "メカビアン第二書", "同上"], ["መጽሐፈ መቃብያን ሣልስ", "Mäṣḥafä Mäḳabyan Śals", "マツハファ・マカブヤン・サルス", "メカビアン第三書", "ሣልስ=第三"], ["መጽሐፈ ጥበብ", "Mäṣḥafä Ṭbäb", "マツハファ・トゥバブ", "知恵の書", "ጥበበ ሰሎሞን(ソロモンの知恵)とも"], ["መጽሐፈ ሲራክ", "Mäṣḥafä Sirak", "マツハファ・シラク", "シラ書(集会の書)", "ተግሣጽ(戒め)と呼ばれることもある"], ["መጽሐፈ ባሮክ", "Mäṣḥafä Baruk", "マツハファ・バルク", "バルク書", ""], ["ተረፈ ኤርምያስ", "Täräfä Ermyas", "タラファ・エルムヤス", "エレミヤ書残篇", "直訳「エレミヤの残り」。バルク4書(パラレイポメナ)に相当"], ["ዕዝራ ሱቱኤል", "ʿƏzra Sutuʾel", "ウズラ・ストゥエル", "第四エズラ書", "新共同訳続編の「エズラ記(ラテン語)」に相当"], ["ዕዝራ ካልዕ", "ʿƏzra Kalʾ", "ウズラ・カルウ", "第三エズラ書", "新共同訳続編の「エズラ記(ギリシア語)」に相当"], ["ጸሎተ ምናሴ", "Ṣälotä Mnase", "ツァロタ・ムナセ", "マナセの祈り", ""]]}, {"ge": "ሐዲስ", "ja": "新約の追加書(広義の正典)", "books": [["ሲኖዶስ", "Sinodos", "シノドス", "シノドス(4部)", "教会規定集。使徒の名による教会法"], ["መጽሐፈ ኪዳን", "Mäṣḥafä Kidan", "マツハファ・キダン", "契約の書(2部)", "主の契約(Testamentum Domini)に相当"], ["ቀሌምንጦስ", "Ḳälemnṭos", "カレムントス", "クレメンスの書", "ローマのクレメンスに帰される書"], ["ዲድስቅልያ", "Didsḳlya", "ディドゥスクルヤ", "ディダスカリア", "使徒たちの教え(教会規定)"]]}]}];
+  const VOCAB = [
+    ["ኦሪት","オリト","律法(トーラー)"],["መጽሐፈ","マツハファ","〜の書"],["ትንቢተ","トゥンビタ","〜の預言"],
+    ["ዘ","ザ","〜の(ゲエズ語)"],["የ","ヤ","〜の(アムハラ語)"],["ወደ … ሰዎች","ワダ … サウォッチ","…の人々へ"],
+    ["መልእክት","マルウクト","手紙・書簡"],["ቀዳማዊ · ካልዕ · ሣልስ","カダマウィ・カルウ・サルス","第一・第二・第三(ゲエズ語)"],
+    ["1ኛ · 2ኛ · 3ኛ","アンダニャ・フラッタニャ・ソスタニャ","第一・第二・第三(アムハラ語)"]
+  ];
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  // 備考内のゲエズ文字にフォントを当てる
+  const geSpan = s => esc(s).replace(/([ሀ-᎟ⶀ-⷟]+(?:\s[ሀ-᎟]+)*)/g, '<span class="ge">$1</span>');
+
+  document.getElementById("vocab").innerHTML = VOCAB.map(v =>
+    `<div><span class="w ge">${esc(v[0])}</span><span class="k">${esc(v[1])}</span><span class="m">${esc(v[2])}</span></div>`).join("");
+
+  let n = 0;
+  DATA.forEach(s => s.groups.forEach(g => g.books.forEach(b => { b.num = s.id === "ext" ? "—" : String(++n); })));
+
+  let filter = "all";
+  function render() {
+    const q = document.getElementById("q").value.trim().toLowerCase();
+    let shown = 0;
+    const html = DATA.filter(s => filter === "all" || s.id === filter).map(s => {
+      const groups = s.groups.map(g => {
+        const rows = g.books.filter(b => !q || b.join(" ").toLowerCase().includes(q));
+        shown += rows.length;
+        if (!rows.length) return "";
+        return `<h3 class="grp"><span class="ge">${esc(g.ge)}</span>${esc(g.ja)}</h3>
+          <div class="table-scroll"><table>
+            <thead><tr><th>#</th><th>ゲエズ語書名</th><th>読み方</th><th>日本語書名</th><th>備考</th></tr></thead>
+            <tbody>${rows.map(b => `<tr>
+              <td class="num">${b.num}</td>
+              <td class="gez">${esc(b[0])}</td>
+              <td class="read"><span class="kt">${esc(b[2])}</span><span class="rom">${esc(b[1])}</span></td>
+              <td class="ja">${esc(b[3])}</td>
+              <td class="note">${geSpan(b[4])}</td></tr>`).join("")}</tbody>
+          </table></div>`;
+      }).join("");
+      if (!groups) return "";
+      const note = s.id === "ext" ? `<p class="ext-note">上の66巻はプロテスタント聖書と同じ構成。エチオピア正教会テワヘド教会は81巻を正典とし、以下の書を加える。</p>` : "";
+      return `<section class="testament"><h2 class="sec"><span class="ge">${esc(s.ge)}</span>${esc(s.ja)}<span class="rd">${esc(s.reading)}</span></h2>${note}${groups}</section>`;
+    }).join("");
+    document.getElementById("list").innerHTML = html || `<p class="empty">「${esc(q)}」に一致する書名はありません。別の綴りか日本語名で検索してください。</p>`;
+    document.getElementById("count").textContent = `${shown} 書を表示中`;
+  }
+  document.getElementById("q").addEventListener("input", render);
+  document.querySelectorAll(".tabs button").forEach(btn => btn.addEventListener("click", () => {
+    filter = btn.dataset.f;
+    document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+    render();
+  }));
+  render();
+</script>
