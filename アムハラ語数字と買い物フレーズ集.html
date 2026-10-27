@@ -1,0 +1,294 @@
+<title>アムハラ語数字と買い物フレーズ集</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Ethiopic:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #EDEAE1; --surface: #F8F5ED; --surface-alt: #E2DDCD;
+    --ink: #241F19; --ink-muted: #6E6455; --accent: #AC3527;
+    --accent-soft: #DCC9AE; --border: #D6CFBC;
+    --f-ge: "Noto Serif Ethiopic", "Nyala", serif;
+    --f-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+    --f-rom: "Noto Serif", Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); line-height: 1.7; }
+  .ge { font-family: var(--f-ge); }
+  .rom { font-family: var(--f-rom); font-style: italic; }
+  header.masthead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px 28px;
+    padding-bottom: 20px; border-bottom: 2px solid var(--accent); }
+  .mark { font-weight: 700; color: var(--accent); line-height: 1.1; }
+  .titles h1 { margin: 0 0 4px; text-wrap: balance; }
+  .titles p { margin: 0; color: var(--ink-muted); max-width: 62ch; }
+  h2.sec { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; text-wrap: balance; }
+  h2.sec .ge { color: var(--accent); }
+  .notes { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+    border-radius: 4px; padding: 14px 20px; }
+  .notes h3 { margin: 0 0 8px; font-size: 0.95rem; }
+  .notes ul { margin: 0; padding-left: 1.15em; display: flex; flex-direction: column; gap: 6px; font-size: 0.86rem; }
+  footer { padding-top: 14px; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--ink-muted); }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { color-scheme: dark; --bg: #1B1712; --surface: #241F19; --surface-alt: #2D2721;
+      --ink: #EEE6D6; --ink-muted: #A6987F; --accent: #E06A54;
+      --accent-soft: #493F35; --border: #3A332B; }
+  }
+  :root[data-theme="dark"] { color-scheme: dark; --bg: #1B1712; --surface: #241F19; --surface-alt: #2D2721;
+      --ink: #EEE6D6; --ink-muted: #A6987F; --accent: #E06A54;
+      --accent-soft: #493F35; --border: #3A332B; }
+
+  #list { display: flex; flex-direction: column; gap: 30px; }
+  body { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: clamp(20px, 4vw, 56px); }
+  .page { max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px; }
+  .mark { font-size: clamp(2.3rem, 6vw, 3.4rem); }
+  .titles h1 { font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
+  .titles p { font-size: 0.9rem; }
+
+  .ends-wrap { display: flex; flex-direction: column; gap: 10px; }
+  .ends-wrap p { margin: 0; font-size: 0.88rem; max-width: 68ch; }
+  .ends { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 8px; }
+  .ends button { font: inherit; text-align: left; cursor: pointer; color: var(--ink);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 10px 14px;
+    display: flex; flex-direction: column; gap: 2px; }
+  .ends button:hover { border-color: var(--accent-soft); }
+  .ends button[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+  .ends button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .ends .lbl { font-size: 0.78rem; color: var(--ink-muted); font-weight: 700; letter-spacing: 0.04em; }
+  .ends .suf { font-family: var(--f-ge); color: var(--accent); font-size: 1.25rem; }
+  .ends .suf .rom { font-size: 0.85rem; color: var(--ink-muted); margin-left: 6px; }
+  .ends .ex { font-family: var(--f-ge); font-size: 0.85rem; }
+
+  section.scene { display: flex; flex-direction: column; gap: 12px; }
+  h2.sec { font-size: 1.15rem; }
+  h2.sec .ge { font-size: 1.45rem; }
+  .list { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; }
+  .ph { display: grid; grid-template-columns: minmax(9em, 13em) minmax(0, 1fr); gap: 4px 24px;
+    padding: 14px 18px; border-bottom: 1px solid var(--border); }
+  .ph:last-child { border-bottom: 0; }
+  .ph .ja { font-weight: 700; font-size: 0.95rem; }
+  .ph .ja .tag { display: inline-block; margin-top: 4px; font-size: 0.7rem; font-weight: 500; color: var(--accent);
+    border: 1px solid var(--accent-soft); border-radius: 3px; padding: 0 6px; }
+  .ph .body { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+  .ph .gez { font-family: var(--f-ge); font-size: 1.55rem; line-height: 1.35; }
+  .ph .kt { color: var(--accent); font-size: 0.95rem; }
+  .ph .rom { color: var(--ink-muted); font-size: 0.85rem; margin-left: 10px; }
+  .ph .note { font-size: 0.82rem; color: var(--ink-muted); margin-top: 4px; }
+  .ph .note .ge { color: var(--ink); }
+  .others { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 6px; font-size: 0.8rem; }
+  .others span { color: var(--ink-muted); }
+  .others b { font-weight: 500; color: var(--ink); font-family: var(--f-ge); }
+  @media (max-width: 560px) { .ph { grid-template-columns: 1fr; } .ph .rom { display: block; margin-left: 0; } }
+
+  .dlg { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 8px 18px; }
+  .line { display: grid; grid-template-columns: 2em minmax(0, 1fr); gap: 4px 12px; padding: 10px 0; border-bottom: 1px dashed var(--border); }
+  .line:last-child { border-bottom: 0; }
+  .line .sp { font-weight: 700; color: var(--accent); font-family: var(--f-rom); }
+  .line .gez { font-family: var(--f-ge); font-size: 1.2rem; }
+  .line .kt { font-size: 0.85rem; color: var(--accent); display: block; }
+  .line .tr { font-size: 0.85rem; color: var(--ink-muted); display: block; }
+
+  .lead { margin: 0; font-size: 0.88rem; max-width: 70ch; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px;
+    display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+  .card .n { font-family: var(--f-rom); font-weight: 700; font-size: 1.05rem; display: flex; justify-content: space-between; gap: 8px; }
+  .card .n .gzn { font-family: var(--f-ge); color: var(--accent); font-weight: 400; }
+  .card .gez { font-family: var(--f-ge); font-size: 1.35rem; line-height: 1.35; overflow-wrap: anywhere; }
+  .card .kt { color: var(--accent); font-size: 0.88rem; }
+  .card .rom { color: var(--ink-muted); font-size: 0.8rem; }
+  .card .ja { font-weight: 700; font-size: 0.9rem; }
+  .card .note { font-size: 0.78rem; color: var(--ink-muted); }
+  .rules { margin: 0; padding-left: 1.15em; font-size: 0.88rem; display: flex; flex-direction: column; gap: 4px; max-width: 75ch; }
+
+  .conv { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+    border-radius: 6px; padding: 16px 20px; display: flex; flex-direction: column; gap: 12px; }
+  .conv label { font-weight: 700; font-size: 0.9rem; }
+  .conv .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .conv input { font: inherit; font-family: var(--f-rom); font-size: 1.15rem; width: 11em; max-width: 100%;
+    padding: 6px 10px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg); color: var(--ink); }
+  .conv input:focus-visible, .conv button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .conv button { font: inherit; font-size: 0.82rem; cursor: pointer; padding: 4px 10px; border-radius: 4px;
+    border: 1px solid var(--border); background: var(--surface-alt); color: var(--ink); }
+  .conv button:hover { border-color: var(--accent-soft); }
+  .conv .out { display: flex; flex-direction: column; gap: 2px; min-height: 5.5em; }
+  .conv .out .gez { font-family: var(--f-ge); font-size: 1.7rem; line-height: 1.35; overflow-wrap: anywhere; }
+  .conv .out .kt { color: var(--accent); }
+  .conv .out .rom { color: var(--ink-muted); font-size: 0.88rem; }
+  .conv .out .gzline { font-size: 0.88rem; color: var(--ink-muted); }
+  .conv .out .gzline b { font-family: var(--f-ge); font-size: 1.3rem; color: var(--accent); font-weight: 400; }
+  .conv .err { color: var(--accent); font-size: 0.88rem; }
+
+  .gzchart { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 6px; }
+  .gzchart div { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; text-align: center; padding: 6px 0; }
+  .gzchart .g { font-family: var(--f-ge); font-size: 1.6rem; color: var(--accent); display: block; line-height: 1.3; }
+  .gzchart .v { font-size: 0.8rem; color: var(--ink-muted); font-family: var(--f-rom); }
+</style>
+
+<div class="page">
+  <header class="masthead">
+    <div class="mark ge">ገበያ</div>
+    <div class="titles">
+      <h1>アムハラ語 数字と買い物フレーズ集</h1>
+      <p>0 から 百万までの数え方、ゲエズ数字、ブルとサンティム、市場で値段を聞いてまけてもらうまでのフレーズ。頼みごとは話しかける相手(男性・女性・目上・複数)で形が変わるので、その形も並べた。</p>
+    </div>
+  </header>
+  <section class="scene"><h2 class="sec"><span class="ge">ቁጥሮች</span>0〜10</h2>
+    
+    <div class="cards"><div class="card"><span class="n">0<span class="gzn"></span></span><span class="gez">ዜሮ</span><span class="kt">ゼロ</span><span class="rom">zero</span></div><div class="card"><span class="n">1<span class="gzn">፩</span></span><span class="gez">አንድ</span><span class="kt">アンド</span><span class="rom">and</span></div><div class="card"><span class="n">2<span class="gzn">፪</span></span><span class="gez">ሁለት</span><span class="kt">フレト</span><span class="rom">hulät</span></div><div class="card"><span class="n">3<span class="gzn">፫</span></span><span class="gez">ሶስት</span><span class="kt">ソスト</span><span class="rom">sost</span></div><div class="card"><span class="n">4<span class="gzn">፬</span></span><span class="gez">አራት</span><span class="kt">アラト</span><span class="rom">arat</span></div><div class="card"><span class="n">5<span class="gzn">፭</span></span><span class="gez">አምስት</span><span class="kt">アムスト</span><span class="rom">amməst</span></div><div class="card"><span class="n">6<span class="gzn">፮</span></span><span class="gez">ስድስት</span><span class="kt">シディスト</span><span class="rom">sədəst</span></div><div class="card"><span class="n">7<span class="gzn">፯</span></span><span class="gez">ሰባት</span><span class="kt">セバト</span><span class="rom">säbat</span></div><div class="card"><span class="n">8<span class="gzn">፰</span></span><span class="gez">ስምንት</span><span class="kt">シミント</span><span class="rom">səmmənt</span></div><div class="card"><span class="n">9<span class="gzn">፱</span></span><span class="gez">ዘጠኝ</span><span class="kt">ゼテニュ</span><span class="rom">zäṭäñ</span></div><div class="card"><span class="n">10<span class="gzn">፲</span></span><span class="gez">አስር</span><span class="kt">アスル</span><span class="rom">assər</span></div></div>
+  </section>
+  <section class="scene"><h2 class="sec"><span class="ge">ከ11 እስከ 90</span>11〜19 と 十の位</h2>
+    <ul class="rules"><li>11〜19 は アスラ(<span class="ge">አስራ</span>)のあとに一の位を置く: 11 = <span class="ge">አስራ</span> <span class="ge">አንድ</span>、15 = <span class="ge">አስራ</span> <span class="ge">አምስት</span>。</li><li>21 以上は十の位と一の位を並べるだけ: 25 = <span class="ge">ሀያ</span> <span class="ge">አምስት</span>。日本語と同じ順で、「と」にあたる語は入らない。</li><li>百・千は 100 = <span class="ge">መቶ</span>、200 = <span class="ge">ሁለት</span> <span class="ge">መቶ</span> のように前に数を置く。1 のときは数を付けない(アンド を付けて <span class="ge">አንድ</span> <span class="ge">ሺህ</span> とも言う)。</li><li>1万は「10 千」= <span class="ge">አስር</span> <span class="ge">ሺህ</span>、10万は「100 千」= <span class="ge">መቶ</span> <span class="ge">ሺህ</span>。万の単位はなく、千で数える(英語と同じ)。</li></ul>
+    <div class="cards"><div class="card"><span class="n">11<span class="gzn">፲፩</span></span><span class="gez">አስራ አንድ</span><span class="kt">アスラ・アンド</span><span class="rom">asra and</span></div><div class="card"><span class="n">12<span class="gzn">፲፪</span></span><span class="gez">አስራ ሁለት</span><span class="kt">アスラ・フレト</span><span class="rom">asra hulät</span></div><div class="card"><span class="n">15<span class="gzn">፲፭</span></span><span class="gez">አስራ አምስት</span><span class="kt">アスラ・アムスト</span><span class="rom">asra amməst</span></div><div class="card"><span class="n">19<span class="gzn">፲፱</span></span><span class="gez">አስራ ዘጠኝ</span><span class="kt">アスラ・ゼテニュ</span><span class="rom">asra zäṭäñ</span></div><div class="card"><span class="n">20<span class="gzn">፳</span></span><span class="gez">ሀያ</span><span class="kt">ハヤ</span><span class="rom">haya</span></div><div class="card"><span class="n">30<span class="gzn">፴</span></span><span class="gez">ሰላሳ</span><span class="kt">セラサ</span><span class="rom">sälasa</span></div><div class="card"><span class="n">40<span class="gzn">፵</span></span><span class="gez">አርባ</span><span class="kt">アルバ</span><span class="rom">arba</span></div><div class="card"><span class="n">50<span class="gzn">፶</span></span><span class="gez">ሀምሳ</span><span class="kt">ハムサ</span><span class="rom">hamsa</span></div><div class="card"><span class="n">60<span class="gzn">፷</span></span><span class="gez">ስልሳ</span><span class="kt">シルサ</span><span class="rom">səlsa</span></div><div class="card"><span class="n">70<span class="gzn">፸</span></span><span class="gez">ሰባ</span><span class="kt">セバ</span><span class="rom">säba</span></div><div class="card"><span class="n">80<span class="gzn">፹</span></span><span class="gez">ሰማንያ</span><span class="kt">セマニヤ</span><span class="rom">sämanya</span></div><div class="card"><span class="n">90<span class="gzn">፺</span></span><span class="gez">ዘጠና</span><span class="kt">ゼテナ</span><span class="rom">zäṭäna</span></div></div>
+  </section>
+  <section class="scene"><h2 class="sec"><span class="ge">ትላልቅ ቁጥሮች</span>百・千・百万</h2>
+    
+    <div class="cards"><div class="card"><span class="n">100<span class="gzn">፻</span></span><span class="gez">መቶ</span><span class="kt">メト</span><span class="rom">mäto</span></div><div class="card"><span class="n">200<span class="gzn">፪፻</span></span><span class="gez">ሁለት መቶ</span><span class="kt">フレト・メト</span><span class="rom">hulät mäto</span></div><div class="card"><span class="n">500<span class="gzn">፭፻</span></span><span class="gez">አምስት መቶ</span><span class="kt">アムスト・メト</span><span class="rom">amməst mäto</span></div><div class="card"><span class="n">1,000<span class="gzn">፲፻</span></span><span class="gez">ሺህ</span><span class="kt">シフ</span><span class="rom">ših</span></div><div class="card"><span class="n">2,000<span class="gzn">፳፻</span></span><span class="gez">ሁለት ሺህ</span><span class="kt">フレト・シフ</span><span class="rom">hulät ših</span></div><div class="card"><span class="n">10,000<span class="gzn">፼</span></span><span class="gez">አስር ሺህ</span><span class="kt">アスル・シフ</span><span class="rom">assər ših</span></div><div class="card"><span class="n">100,000<span class="gzn"></span></span><span class="gez">መቶ ሺህ</span><span class="kt">メト・シフ</span><span class="rom">mäto ših</span></div><div class="card"><span class="n">1,000,000<span class="gzn"></span></span><span class="gez">አንድ ሚሊዮን</span><span class="kt">アンド・ミリヨン</span><span class="rom">and miliyon</span></div></div>
+  </section>
+  <section class="scene"><h2 class="sec"><span class="ge">ምሳሌ</span>組み立ての例</h2>
+    
+    <div class="cards"><div class="card"><span class="n">15<span class="gzn">፲፭</span></span><span class="gez">አስራ አምስት</span><span class="kt">アスラ・アムスト</span><span class="rom">asra amməst</span></div><div class="card"><span class="n">25<span class="gzn">፳፭</span></span><span class="gez">ሀያ አምስት</span><span class="kt">ハヤ・アムスト</span><span class="rom">haya amməst</span></div><div class="card"><span class="n">68<span class="gzn">፷፰</span></span><span class="gez">ስልሳ ስምንት</span><span class="kt">シルサ・シミント</span><span class="rom">səlsa səmmənt</span></div><div class="card"><span class="n">150<span class="gzn">፻፶</span></span><span class="gez">መቶ ሀምሳ</span><span class="kt">メト・ハムサ</span><span class="rom">mäto hamsa</span><span class="note">150ブル。市場でよく聞く値段</span></div><div class="card"><span class="n">250<span class="gzn">፪፻፶</span></span><span class="gez">ሁለት መቶ ሀምሳ</span><span class="kt">フレト・メト・ハムサ</span><span class="rom">hulät mäto hamsa</span></div><div class="card"><span class="n">1,500<span class="gzn">፲፭፻</span></span><span class="gez">ሺህ አምስት መቶ</span><span class="kt">シフ・アムスト・メト</span><span class="rom">ših amməst mäto</span></div><div class="card"><span class="n">2,019<span class="gzn">፳፻፲፱</span></span><span class="gez">ሁለት ሺህ አስራ ዘጠኝ</span><span class="kt">フレト・シフ・アスラ・ゼテニュ</span><span class="rom">hulät ših asra zäṭäñ</span><span class="note">エチオピア暦の今年(2026年9月〜)</span></div><div class="card"><span class="n">25,000<span class="gzn"></span></span><span class="gez">ሀያ አምስት ሺህ</span><span class="kt">ハヤ・アムスト・シフ</span><span class="rom">haya amməst ših</span></div></div>
+  </section>
+  <section class="scene"><h2 class="sec"><span class="ge">ቁጥር ቀይር</span>数をアムハラ語にしてみる</h2>
+    <div class="conv">
+      <label for="num">0〜9,999,999 の数を入れる</label>
+      <div class="row"><input id="num" type="number" inputmode="numeric" min="0" max="9999999" step="1" value="150">
+        <span class="row" id="quick"></span></div>
+      <div class="out" id="out" aria-live="polite"></div>
+    </div>
+  </section>
+  <section class="scene"><h2 class="sec"><span class="ge">የግዕዝ ቁጥሮች</span>ゲエズ数字</h2>
+    <p class="lead">エチオピア独自の数字。1〜9、10〜90、100、10000 の20字を組み合わせる。ゼロはなく、暦・教会・聖書の章節番号などで使う(値段は 1, 2, 3… のアラビア数字)。</p>
+    <div class="gzchart"><div><span class="g">፩</span><span class="v">1</span></div><div><span class="g">፪</span><span class="v">2</span></div><div><span class="g">፫</span><span class="v">3</span></div><div><span class="g">፬</span><span class="v">4</span></div><div><span class="g">፭</span><span class="v">5</span></div><div><span class="g">፮</span><span class="v">6</span></div><div><span class="g">፯</span><span class="v">7</span></div><div><span class="g">፰</span><span class="v">8</span></div><div><span class="g">፱</span><span class="v">9</span></div><div><span class="g">፲</span><span class="v">10</span></div><div><span class="g">፳</span><span class="v">20</span></div><div><span class="g">፴</span><span class="v">30</span></div><div><span class="g">፵</span><span class="v">40</span></div><div><span class="g">፶</span><span class="v">50</span></div><div><span class="g">፷</span><span class="v">60</span></div><div><span class="g">፸</span><span class="v">70</span></div><div><span class="g">፹</span><span class="v">80</span></div><div><span class="g">፺</span><span class="v">90</span></div><div><span class="g">፻</span><span class="v">100</span></div><div><span class="g">፼</span><span class="v">10,000</span></div></div>
+    <div class="cards"><div class="card"><span class="n">25<span class="gzn">፳፭</span></span><span class="note">二十+五</span></div><div class="card"><span class="n">100<span class="gzn">፻</span></span><span class="note">百の位の1は書かない</span></div><div class="card"><span class="n">110<span class="gzn">፻፲</span></span><span class="note">百+十</span></div><div class="card"><span class="n">2,019<span class="gzn">፳፻፲፱</span></span><span class="note">二十 百 十九 = 20×100+19</span></div><div class="card"><span class="n">10,000<span class="gzn">፼</span></span><span class="note">万は ፼ 1字</span></div></div>
+  </section>
+  <section class="scene"><h2 class="sec"><span class="ge">ገንዘብ</span>お金</h2>
+    <p class="lead">通貨はブル(ብር)。1ブル = 100サンティム(ሳንቲም)。</p>
+    <div class="cards"><div class="card"><span class="ja">ブル(エチオピアの通貨)</span><span class="gez">ብር</span><span class="kt">ブル</span><span class="rom">bərr</span><span class="note">もとの意味は「銀」。</span></div><div class="card"><span class="ja">サンティム(1ブルの100分の1)</span><span class="gez">ሳንቲም</span><span class="kt">サンティム</span><span class="rom">santim</span><span class="note">「硬貨」の意味もある。</span></div><div class="card"><span class="ja">50サンティム</span><span class="gez">ሀምሳ ሳንቲም</span><span class="kt">ハムサ・サンティム</span><span class="rom">hamsa santim</span></div><div class="card"><span class="ja">25ブル</span><span class="gez">ሀያ አምስት ብር</span><span class="kt">ハヤ・アムスト・ブル</span><span class="rom">haya amməst bərr</span><span class="note">数のあとに <span class="ge">ብር</span> を置く。</span></div><div class="card"><span class="ja">お金</span><span class="gez">ገንዘብ</span><span class="kt">ゲンゼブ</span><span class="rom">gänzäb</span></div><div class="card"><span class="ja">お釣り</span><span class="gez">መልስ</span><span class="kt">メルス</span><span class="rom">mäls</span><span class="note">もとの意味は「答え・返事」。</span></div><div class="card"><span class="ja">値段</span><span class="gez">ዋጋ</span><span class="kt">ワガ</span><span class="rom">waga</span></div></div>
+  </section>
+  <div class="ends-wrap">
+    <h2 class="sec"><span class="ge">ለማን?</span>頼みごとは相手で形が変わる</h2>
+    <p>「まけて」「ください」のような頼みごと(命令形)は、相手によって語尾が変わる。下のボタンで相手を選ぶと、フレーズがその形に切り替わる。-ልኝ は「私のために」、-ኝ は「私に」。</p>
+    <div class="ends" role="group" aria-label="話しかける相手">
+      <button type="button" data-k="m" aria-pressed="true"><span class="lbl">男性へ</span><span class="suf">−<span class="rom">語尾なし</span></span><span class="ex">ቀንስ · ስጥ</span></button>
+      <button type="button" data-k="f" aria-pressed="false"><span class="lbl">女性へ</span><span class="suf">-ኢ<span class="rom">-i</span></span><span class="ex">ቀንሺ · ስጪ</span></button>
+      <button type="button" data-k="p" aria-pressed="false"><span class="lbl">目上の人へ</span><span class="suf">ይ- … -ኡ<span class="rom">yə- … -u</span></span><span class="ex">ይቀንሱ · ይስጡ</span></button>
+      <button type="button" data-k="pl" aria-pressed="false"><span class="lbl">複数の人へ</span><span class="suf">-ኡ<span class="rom">-u</span></span><span class="ex">ቀንሱ · ስጡ</span></button>
+    </div>
+  </div>
+  <div id="list"></div>
+  <section class="scene"><h2 class="sec"><span class="ge">ዕቃዎች</span>品物と買い物の単語</h2>
+    <div class="cards"><div class="card"><span class="ja">水</span><span class="gez">ውሃ</span><span class="kt">ウィハ</span><span class="rom">wəha</span></div><div class="card"><span class="ja">コーヒー</span><span class="gez">ቡና</span><span class="kt">ブンナ</span><span class="rom">bunna</span></div><div class="card"><span class="ja">お茶</span><span class="gez">ሻይ</span><span class="kt">シャイ</span><span class="rom">šay</span></div><div class="card"><span class="ja">牛乳</span><span class="gez">ወተት</span><span class="kt">ウェテト</span><span class="rom">wätät</span></div><div class="card"><span class="ja">パン</span><span class="gez">ዳቦ</span><span class="kt">ダボ</span><span class="rom">dabo</span></div><div class="card"><span class="ja">インジェラ</span><span class="gez">እንጀራ</span><span class="kt">インジェラ</span><span class="rom">ənǧära</span></div><div class="card"><span class="ja">卵</span><span class="gez">እንቁላል</span><span class="kt">インクラル</span><span class="rom">ənqulal</span></div><div class="card"><span class="ja">鶏肉</span><span class="gez">ዶሮ</span><span class="kt">ドロ</span><span class="rom">doro</span></div><div class="card"><span class="ja">肉</span><span class="gez">ስጋ</span><span class="kt">スガ</span><span class="rom">səga</span></div><div class="card"><span class="ja">バナナ</span><span class="gez">ሙዝ</span><span class="kt">ムズ</span><span class="rom">muz</span></div><div class="card"><span class="ja">オレンジ</span><span class="gez">ብርቱካን</span><span class="kt">ブルトゥカン</span><span class="rom">bərtukan</span></div><div class="card"><span class="ja">トマト</span><span class="gez">ቲማቲም</span><span class="kt">ティマティム</span><span class="rom">timatim</span></div><div class="card"><span class="ja">玉ねぎ</span><span class="gez">ሽንኩርት</span><span class="kt">シンクルト</span><span class="rom">šənkurt</span></div><div class="card"><span class="ja">市場</span><span class="gez">ገበያ</span><span class="kt">ゲベヤ</span><span class="rom">gäbäya</span></div><div class="card"><span class="ja">店</span><span class="gez">ሱቅ</span><span class="kt">スク</span><span class="rom">suq</span></div><div class="card"><span class="ja">大きい</span><span class="gez">ትልቅ</span><span class="kt">ティッリク</span><span class="rom">təlləq</span></div><div class="card"><span class="ja">小さい / 少し</span><span class="gez">ትንሽ</span><span class="kt">ティンニシュ</span><span class="rom">tənnəš</span></div><div class="card"><span class="ja">たくさん</span><span class="gez">ብዙ</span><span class="kt">ブズ</span><span class="rom">bəzu</span></div><div class="card"><span class="ja">半分</span><span class="gez">ግማሽ</span><span class="kt">ギッマシュ</span><span class="rom">gəmmaš</span></div><div class="card"><span class="ja">キロ</span><span class="gez">ኪሎ</span><span class="kt">キロ</span><span class="rom">kilo</span></div></div>
+  </section>
+  <section class="scene"><h2 class="sec"><span class="ge">በገበያ</span>市場での会話の例<span class="rom" style="font-size:.8rem;color:var(--ink-muted)">A(客)が男性の店主 B に話しかける場面</span></h2>
+    <div class="dlg">
+      <div class="line"><span class="sp">A</span><div><span class="gez">ይቅርታ፣ ሙዝ አለ?</span><span class="kt">イキルタ、ムズ・アッレ?</span><span class="tr">すみません、バナナはありますか。</span></div></div>
+      <div class="line"><span class="sp">B</span><div><span class="gez">አዎ፣ አለ።</span><span class="kt">アウォ、アッレ。</span><span class="tr">はい、あります。</span></div></div>
+      <div class="line"><span class="sp">A</span><div><span class="gez">አንድ ኪሎ ስንት ነው?</span><span class="kt">アンド・キロ・シント・ネウ?</span><span class="tr">1キロいくらですか。</span></div></div>
+      <div class="line"><span class="sp">B</span><div><span class="gez">ሰማንያ ብር ነው።</span><span class="kt">セマニヤ・ブル・ネウ。</span><span class="tr">80ブルです。</span></div></div>
+      <div class="line"><span class="sp">A</span><div><span class="gez">በጣም ውድ ነው! ቀንስልኝ።</span><span class="kt">ベタム・ウッド・ネウ! ケンスィッレニュ。</span><span class="tr">高すぎます! まけてください。</span></div></div>
+      <div class="line"><span class="sp">B</span><div><span class="gez">እሺ፣ ሰባ ብር።</span><span class="kt">イッシ、セバ・ブル。</span><span class="tr">わかりました、70ブル。</span></div></div>
+      <div class="line"><span class="sp">A</span><div><span class="gez">በስልሳ ብር ይሆናል?</span><span class="kt">ベシルサ・ブル・イホナル?</span><span class="tr">60ブルでどうですか。</span></div></div>
+      <div class="line"><span class="sp">B</span><div><span class="gez">እሺ፣ ይሁን።</span><span class="kt">イッシ、イフン。</span><span class="tr">いいでしょう。</span></div></div>
+      <div class="line"><span class="sp">A</span><div><span class="gez">ሁለት ኪሎ ስጠኝ።</span><span class="kt">フレト・キロ・スィテニュ。</span><span class="tr">2キロください。</span></div></div>
+      <div class="line"><span class="sp">B</span><div><span class="gez">መቶ ሀያ ብር ነው።</span><span class="kt">メト・ハヤ・ブル・ネウ。</span><span class="tr">120ブルです。</span></div></div>
+      <div class="line"><span class="sp">A</span><div><span class="gez">አመሰግናለሁ!</span><span class="kt">アメセギナレフ!</span><span class="tr">ありがとう!</span></div></div>
+    </div>
+  </section>
+  <div class="notes">
+    <h3>使うときの注意</h3>
+    <ul>
+      <li>市場(<span class="ge">ገበያ</span>)や露店では値段の交渉が普通。最初の値段の半分〜7割くらいから始めて、笑顔で歩み寄る。スーパーや値札のある店では交渉しない。</li>
+      <li>値段はアラビア数字(1, 2, 3…)で書かれる。ゲエズ数字は暦・教会・聖書の章や節の番号などで使い、ゼロはない。</li>
+      <li>エチオピアの時刻は日の出(朝6時)から数える。1 <span class="ge">ሰዓት</span>(アンド・セアト)は午前7時、6 <span class="ge">ሰዓት</span> は正午。約束の時間はどちらの数え方か確かめる。</li>
+      <li>「まけて」「ください」などの頼みごとは相手で形が変わる。迷ったら「目上の人へ」の形を選べば失礼にならない。</li>
+      <li>カタカナは目安。放出音(<span class="ge">ጠ</span> <span class="ge">ጣ</span> <span class="ge">ቅ</span> など)は日本語にない音なので、音源で確認すること。</li>
+    </ul>
+  </div>
+  <footer>数字・お金・時刻は Wikivoyage「Amharic phrasebook」、単語の綴りと意味は Wiktionary の各語の記事(<span class="ge">ውድ</span>・<span class="ge">ብር</span>・<span class="ge">ሳንቲም</span>・<span class="ge">ቀነሰ</span>・<span class="ge">መልስ</span>・<span class="ge">ግማሽ</span>・<span class="ge">ፈለገ</span>・<span class="ge">ዋጋ</span>・<span class="ge">ገበያ</span>・<span class="ge">ሱቅ</span> ほか)、ゲエズ数字は Unicode のエチオピア文字表をもとに作成(2026-10-27)。<span class="ge">ርካሽ</span>・<span class="ge">ሚሊዮን</span> と命令形(<span class="ge">ስጠኝ</span>・<span class="ge">አሳየኝ</span>・<span class="ge">ቆይ</span>)は辞書で直接確認できず、一般的な形と活用の規則から作成した。</footer>
+</div>
+<script>
+  const SECTIONS = [{"ge": "ዋጋ", "ja": "値段を聞く", "phrases": [{"ja": "いくらですか", "ge": "ስንት ነው?", "rom": "sənt näw?", "kana": "シント・ネウ?", "note": "ስንት は「いくつ・いくら」。品物を指さしながら言えば通じる。"}, {"ja": "これはいくらですか", "ge": "ይሄ ስንት ነው?", "rom": "yəhe sənt näw?", "kana": "イヘ・シント・ネウ?", "note": "ይሄ(イヘ)は「これ」。"}, {"ja": "1キロいくらですか", "ge": "አንድ ኪሎ ስንት ነው?", "rom": "and kilo sənt näw?", "kana": "アンド・キロ・シント・ネウ?", "note": "野菜や果物は市場でキロ単位で売られる。ግማሽ ኪሎ(ギッマシュ・キロ)= 500グラム。"}, {"ja": "〜ブルです", "ge": "… ብር ነው", "rom": "… bərr näw", "kana": "… ブル・ネウ", "note": "店の人の答え方。例: ሀምሳ ብር ነው(ハムサ・ブル・ネウ)= 50ブルです。"}, {"ja": "いちばん安くていくらですか", "ge": "የመጨረሻ ዋጋ ስንት ነው?", "rom": "yämäčärräša waga sənt näw?", "kana": "イェメチェレシャ・ワガ・シント・ネウ?", "note": "直訳は「最後の値段はいくらですか」。"}]}, {"ge": "ድርድር", "ja": "値段の交渉", "phrases": [{"ja": "高いです", "ge": "ውድ ነው", "rom": "wədd näw", "kana": "ウッド・ネウ", "note": ""}, {"ja": "高すぎます", "ge": "በጣም ውድ ነው", "rom": "bäṭam wədd näw", "kana": "ベタム・ウッド・ネウ", "note": "በጣም(ベタム)は「とても」。"}, {"ja": "安いです", "ge": "ርካሽ ነው", "rom": "rəkaš näw", "kana": "ルカシュ・ネウ", "note": ""}, {"ja": "まけてください", "forms": {"m": ["ቀንስልኝ", "qänsəlləñ", "ケンスィッレニュ"], "f": ["ቀንሺልኝ", "qänšilləñ", "ケンシッレニュ"], "p": ["ይቀንሱልኝ", "yəqänsulləñ", "イケンスッレニュ"], "pl": ["ቀንሱልኝ", "qänsulləñ", "ケンスッレニュ"]}, "note": "ቀነሰ(減らす)+ -ልኝ(私のために)。「私のために減らして」。"}, {"ja": "〜ブルでどうですか", "ge": "በ… ብር ይሆናል?", "rom": "bä… bərr yəhonal?", "kana": "ベ… ブル・イホナル?", "note": "例: በስልሳ ብር ይሆናል?(ベシルサ・ブル・イホナル?)= 60ブルでどうですか。"}, {"ja": "いいでしょう(決まり)", "ge": "እሺ፣ ይሁን", "rom": "əšši, yəhun", "kana": "イッシ、イフン", "note": "ይሁን は「そうなりますように」。値段が決まったときに。"}]}, {"ge": "መግዛት", "ja": "買う・頼む", "phrases": [{"ja": "〜はありますか", "ge": "… አለ?", "rom": "… allä?", "kana": "… アッレ?", "note": "例: ውሃ አለ?(ウィハ・アッレ?)= 水はありますか。答えは አለ(アッレ = ある)/ የለም(イェッレム = ない)。"}, {"ja": "〜が欲しいです", "ge": "… እፈልጋለሁ", "rom": "… əfälləgallähu", "kana": "… イフェッリガッレフ", "note": "ፈለገ(欲しがる・探す)から。例: ቡና እፈልጋለሁ(ブンナ・イフェッリガッレフ)= コーヒーが欲しいです。"}, {"ja": "これをください", "forms": {"m": ["ይሄን ስጠኝ", "yəhen səṭäñ", "イヘン・スィテニュ"], "f": ["ይሄን ስጪኝ", "yəhen səčiñ", "イヘン・スィチニュ"], "p": ["ይሄን ይስጡኝ", "yəhen yəsṭuñ", "イヘン・イストゥニュ"], "pl": ["ይሄን ስጡኝ", "yəhen səṭuñ", "イヘン・スィトゥニュ"]}, "note": "ይሄን を数や品物に替えれば「〜をください」。例: ሁለት ኪሎ ስጠኝ(フレト・キロ・スィテニュ)= 2キロください。"}, {"ja": "見せてください", "forms": {"m": ["አሳየኝ", "asayäñ", "アサイェニュ"], "f": ["አሳዪኝ", "asayiñ", "アサイニュ"], "p": ["ያሳዩኝ", "yasayuñ", "ヤサユニュ"], "pl": ["አሳዩኝ", "asayuñ", "アサユニュ"]}, "note": "-ኝ(私に)。手に取って見たいときに。"}, {"ja": "ちょっと待ってください", "forms": {"m": ["ትንሽ ቆይ", "tənnəš qoy", "ティンニシュ・コイ"], "f": ["ትንሽ ቆዪ", "tənnəš qoyi", "ティンニシュ・コイイ"], "p": ["ትንሽ ይቆዩ", "tənnəš yəqoyu", "ティンニシュ・イコユ"], "pl": ["ትንሽ ቆዩ", "tənnəš qoyu", "ティンニシュ・コユ"]}, "note": "ትንሽ(ティンニシュ)は「少し」。お金を数えるときなどに。"}, {"ja": "いりません", "ge": "አልፈልግም", "rom": "alfälləgəm", "kana": "アルフェッリグム", "note": "「欲しくない」。አል- … -ም で否定(አልገባኝም と同じ形)。አመሰግናለሁ を添えるとやわらかい。"}]}];
+  const FORMS = [["m", "男性へ"], ["f", "女性へ"], ["p", "目上の人へ"], ["pl", "複数の人へ"]];
+  const NUM = {"units": {"0": ["ዜሮ", "zero", "ゼロ"], "1": ["አንድ", "and", "アンド"], "2": ["ሁለት", "hulät", "フレト"], "3": ["ሶስት", "sost", "ソスト"], "4": ["አራት", "arat", "アラト"], "5": ["አምስት", "amməst", "アムスト"], "6": ["ስድስት", "sədəst", "シディスト"], "7": ["ሰባት", "säbat", "セバト"], "8": ["ስምንት", "səmmənt", "シミント"], "9": ["ዘጠኝ", "zäṭäñ", "ゼテニュ"], "10": ["አስር", "assər", "アスル"]}, "teen": ["አስራ", "asra", "アスラ"], "tens": {"20": ["ሀያ", "haya", "ハヤ"], "30": ["ሰላሳ", "sälasa", "セラサ"], "40": ["አርባ", "arba", "アルバ"], "50": ["ሀምሳ", "hamsa", "ハムサ"], "60": ["ስልሳ", "səlsa", "シルサ"], "70": ["ሰባ", "säba", "セバ"], "80": ["ሰማንያ", "sämanya", "セマニヤ"], "90": ["ዘጠና", "zäṭäna", "ゼテナ"]}, "hundred": ["መቶ", "mäto", "メト"], "thousand": ["ሺህ", "ših", "シフ"], "million": ["ሚሊዮን", "miliyon", "ミリヨン"], "gd": "፩፪፫፬፭፮፯፰፱", "gt": "፲፳፴፵፶፷፸፹፺"};
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const geSpan = s => esc(s).replace(/([\u1200-\u139f\u2d80-\u2ddf]+(?:\s[\u1200-\u139f]+)*)/g, '<span class="ge">$1</span>');
+
+  // 数 → 語の並び(build_shopping.py の words() と同じ規則)
+  function below100(n) {
+    if (n <= 10) return [NUM.units[n]];
+    if (n < 20) return [NUM.teen, NUM.units[n - 10]];
+    const u = n % 10;
+    return [NUM.tens[n - u]].concat(u ? [NUM.units[u]] : []);
+  }
+  function below1000(n) {
+    const h = Math.floor(n / 100), r = n % 100;
+    const out = h === 0 ? [] : h === 1 ? [NUM.hundred] : [NUM.units[h], NUM.hundred];
+    return out.concat(r ? below100(r) : []);
+  }
+  function words(n) {
+    if (n === 0) return [NUM.units[0]];
+    const m = Math.floor(n / 1e6), t = Math.floor(n / 1000) % 1000, r = n % 1000;
+    let out = [];
+    if (m) out = out.concat(below1000(m), [NUM.million]);
+    if (t) out = out.concat(t === 1 ? [NUM.thousand] : below1000(t).concat([NUM.thousand]));
+    if (r) out = out.concat(below1000(r));
+    return out;
+  }
+  function geez(n) {
+    const pair = p => (p >= 10 ? NUM.gt[Math.floor(p / 10) - 1] : "") + (p % 10 ? NUM.gd[p % 10 - 1] : "");
+    const hi = Math.floor(n / 100), lo = n % 100;
+    return (hi ? (hi > 1 ? pair(hi) : "") + "፻" : "") + pair(lo);
+  }
+  const inp = document.getElementById("num"), outEl = document.getElementById("out");
+  function convert() {
+    const v = inp.value.trim(), n = Number(v);
+    if (v === "" || !Number.isInteger(n) || n < 0 || n > 9999999) {
+      outEl.innerHTML = '<span class="err">0〜9,999,999 の整数を入れてください。</span>'; return;
+    }
+    const w = words(n);
+    const gz = n >= 1 && n <= 9999 ? `ゲエズ数字 <b>${geez(n)}</b>` : n === 10000 ? "ゲエズ数字 <b>፼</b>"
+      : n === 0 ? "ゲエズ数字にゼロはない" : "ゲエズ数字は 1〜9,999 まで表示";
+    outEl.innerHTML = `<span class="gez">${esc(w.map(x => x[0]).join(" "))}</span>
+      <span class="kt">${esc(w.map(x => x[2]).join("・"))}</span>
+      <span class="rom">${esc(w.map(x => x[1]).join(" "))}</span><span class="gzline">${gz}</span>`;
+  }
+  document.getElementById("quick").innerHTML = [25, 80, 120, 350, 1500, 2019, 10000]
+    .map(n => `<button type="button" data-n="${n}">${n.toLocaleString()}</button>`).join("");
+  document.getElementById("quick").addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    inp.value = b.dataset.n; convert();
+  });
+  inp.addEventListener("input", convert);
+  convert();
+
+  let who = "m";
+  try { const v = localStorage.getItem("amh-shop-who"); if (v && FORMS.some(f => f[0] === v)) who = v; } catch (e) {}
+  function phrase(p) {
+    const label = Object.fromEntries(FORMS);
+    let ge = p.ge, rom = p.rom, kana = p.kana, tag = "", others = "";
+    if (p.forms) {
+      [ge, rom, kana] = p.forms[who];
+      tag = `<span class="tag">${label[who]}</span>`;
+      others = `<div class="others">${FORMS.filter(f => f[0] !== who).map(f =>
+        `<span>${f[1]} <b>${esc(p.forms[f[0]][0])}</b></span>`).join("")}</div>`;
+    }
+    return `<div class="ph"><div class="ja">${esc(p.ja)}${tag ? "<br>" + tag : ""}</div>
+      <div class="body"><span class="gez">${esc(ge)}</span>
+      <div><span class="kt">${esc(kana)}</span><span class="rom">${esc(rom)}</span></div>
+      ${p.note ? `<div class="note">${geSpan(p.note)}</div>` : ""}${others}</div></div>`;
+  }
+  function render() {
+    document.getElementById("list").innerHTML = SECTIONS.map(s =>
+      `<section class="scene"><h2 class="sec"><span class="ge">${esc(s.ge)}</span>${esc(s.ja)}</h2>
+       <div class="list">${s.phrases.map(phrase).join("")}</div></section>`).join("");
+    document.querySelectorAll(".ends button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.k === who)));
+  }
+  document.querySelectorAll(".ends button").forEach(b => b.addEventListener("click", () => {
+    who = b.dataset.k;
+    try { localStorage.setItem("amh-shop-who", who); } catch (e) {}
+    render();
+  }));
+  render();
+</script>
